@@ -10,9 +10,9 @@
 
 ## Laboratórios
 
-* [Laboratório 01](lab-01) - Sistema de Controle de Versão
+* [Laboratório 01](lab_01) - Sistema de Controle de Versão
 
 ## Aulas
 
-* [Aula 01](aula-01) - Introdução à linguagem Java
+* [Aula 01](aula_01) - Introdução à linguagem Java
 
