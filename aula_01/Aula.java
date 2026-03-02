@@ -1,6 +1,6 @@
 package aula_01;
 
-public class Start {
+public class Aula {
 
     public static void main(String[] args) {
         int[][] matriz = {
@@ -27,6 +27,5 @@ public class Start {
             }
             System.out.println();
         }
-
     }
 }

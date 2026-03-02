@@ -14,5 +14,5 @@
 
 ## Aulas
 
-* [Aula 01](aula_01) - Introdução à linguagem Java
-
+* [Aula 01](aula_01) - 23/02/2026
+* [Aula 02](aula_02) - 02/03/2026
