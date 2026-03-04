@@ -12,10 +12,12 @@ public class Aula {
 
          double soma = 0;
 
+        //For-each
         for (double nota : notas){
             soma += nota;
         }
 
+        //Classe utilitária Math
         int media = Math.round((float)(soma/ notas.length));
 
         IO.println("Sua média final é: " +media);
