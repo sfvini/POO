@@ -3,12 +3,47 @@
  */
 package engtelecom.poo;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+//import java.util.Random;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+public class App {
+
+    public static void main(String[] args){
+
+//        Random r = new Random();
+//        int n = 0;
+//
+//        for (int i = 0; i < 5; i++) {
+//            n = r.nextInt(10);
+//            System.out.println(n);
+//        }
+
+//        String a = "POO";
+//        String b = "IFSC";
+//
+//        if (a.equalsIgnoreCase("poo")){
+//            System.out.println("Iguais");
+//        }
+//        else {
+//            System.out.println("Diferentes");
+//        }
+//
+//        int i = 2026;
+//
+//        char c = a.charAt(0);
+//        System.out.println(c);
+//
+//        String d = "Eng" + "enharia" + " " + b + " " + a + " " + i;
+//        System.out.println(d);
+//
+//        String s = "Java".repeat(10);
+//        System.out.print(s);
+
+//        if (args.length < 2){
+//            System.err.println("Envie 2 parâmetros");
+//        }
+//
+//        for (String str : args) {
+//            System.out.println(str);
+//        }
     }
 }
