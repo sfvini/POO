@@ -4,11 +4,66 @@
 package engtelecom.poo;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        int dia = Integer.parseInt(IO.readln("Dia: "));
+        String mes = IO.readln("Mês: ");
+
+        if (dia > 31 || dia < 1){
+            System.out.println("Entrada de dia inválida");
+        }
+
+        switch (mes){
+            case "janeiro":
+            case "fevereiro":
+                System.out.println("VERAO");
+                break;
+
+            case "abril":
+            case "maio":
+                System.out.println("OUTONO");
+                break;
+
+            case "julho":
+            case "agosto":
+                System.out.println("INVERNO");
+                break;
+
+            case "outubro":
+            case "novembro":
+                System.out.println("PRIMAVERA");
+                break;
+
+            case "março":
+                if (dia < 21){
+                    System.out.println("Verão");
+                }
+                System.out.println("Outono");
+                break;
+
+            case "junho":
+                if (dia < 21){
+                    System.out.println("Outono");
+                }
+                System.out.println("Inverno");
+                break;
+
+            case "setembro":
+                if (dia < 22){
+                    System.out.println("Inverno");
+                }
+                System.out.println("Primavera");
+                break;
+
+            case "dezembro":
+                if (dia < 21){
+                    System.out.println("Primavera");
+                }
+                System.out.println("Verão");
+                break;
+
+            default:
+                System.out.println("Entrada de mês inválida");
+                break;
+        }
     }
 }
