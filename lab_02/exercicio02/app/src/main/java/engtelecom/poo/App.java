@@ -3,8 +3,25 @@
  */
 package engtelecom.poo;
 
+import java.util.Random;
+
 public class App {
     public static void main(String[] args) {
+        Random r = new Random();
+        int n = r.nextInt(1, 100);
+        int t = 0;
+        int u;
 
+        do {
+            u = Integer.parseInt(IO.readln("Digite o número de 1 a 100: "));
+            if (u > n) {
+                System.out.println("O número digitado é MAIOR que o número sorteado");
+            } else {
+                System.out.println("O número digitado é MENOR que o número sorteado");
+            }
+            t++;
+        } while (u != n);
+
+        System.out.println("ACERTOU COM " + t + " TENTATIVAS");
     }
 }
