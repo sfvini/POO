@@ -4,11 +4,45 @@
 package engtelecom.poo;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        if (args.length == 2 || args.length == 3) {
+            int e1 = Integer.parseInt(args[1]);
+            int e2 = Integer.parseInt(args[2]);
+
+            switch (args[0].toLowerCase()) {
+                case "triangulo":
+
+                    for (int i = 0; i <= e1; i++) {
+                        System.out.println("*".repeat(i));
+                    }
+                    break;
+
+                case "losango":
+                    int elMetade = e1 / 2;
+                    for (int i = 0; i < e1; i++) {
+
+                        // Calcula espaços: diminui no topo, aumenta no fundo (módulo)
+                        int espacos = Math.abs(elMetade - i);
+
+                        // Calcula asteriscos: aumenta no topo, diminui no fundo (módulo)
+                        int asteriscos = e1 - (2 * espacos);
+
+                        // Imprime espaços
+                        for (int j = 0; j < espacos; j++) {
+                            System.out.print(" ");
+                        }
+
+                        // Imprime asteriscos
+                        for (int j = 0; j < asteriscos; j++) {
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                    }
+                    break;
+
+                case "retangulo":
+
+            }
+        }
     }
 }
