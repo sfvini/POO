@@ -13,23 +13,19 @@ public class App {
         }
 
         switch (mes){
-            case "janeiro":
-            case "fevereiro":
+            case "janeiro", "fevereiro":
                 System.out.println("VERAO");
                 break;
 
-            case "abril":
-            case "maio":
+            case "abril", "maio":
                 System.out.println("OUTONO");
                 break;
 
-            case "julho":
-            case "agosto":
+            case "julho", "agosto":
                 System.out.println("INVERNO");
                 break;
 
-            case "outubro":
-            case "novembro":
+            case "outubro", "novembro":
                 System.out.println("PRIMAVERA");
                 break;
 
