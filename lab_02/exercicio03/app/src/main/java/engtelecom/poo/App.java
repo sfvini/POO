@@ -41,7 +41,16 @@ public class App {
                     break;
 
                 case "retangulo":
-
+                    for (int i = 0; i < e1; i++) {
+                        for (int j = 0; j < e2; j++) {
+                            if (i == 0 || i == e1 - 1 || j == 0 || j == e2 - 1) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println();
+                    }
             }
         }
     }
