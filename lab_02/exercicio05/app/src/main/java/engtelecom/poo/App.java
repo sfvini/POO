@@ -3,16 +3,23 @@
  */
 package engtelecom.poo;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
 
+        int[][] matriz = new int[9][9];
+        int linhas = 0;
+
+        Scanner entrada = new Scanner(System.in);
         while (entrada.hasNext()){
+
             String linha = entrada.nextLine();
-            System.out.println(linha);
+
+            for (int i = 0; i < linha.length(); i++) {
+                matriz[linhas][i] = linha.charAt(i) == '.' ? 0 : 9;
+            }
+            linhas++;
         }
     }
 }
