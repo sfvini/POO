@@ -18,7 +18,7 @@ public class App {
 
         int sorte = 0;
 
-        while (sorte < 9) {
+        while (sorte <= 9) {
             int coluna = r.nextInt(9);
             int linha = r.nextInt(9);
 
