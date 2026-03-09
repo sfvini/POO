@@ -8,7 +8,7 @@ import java.util.Random;
 public class App {
     public static void main(String[] args) {
         Random r = new Random();
-        int n = r.nextInt(1, 100);
+        int n = r.nextInt(1, 101);
         int t = 0;
         int u;
 
