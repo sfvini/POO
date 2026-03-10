@@ -16,10 +16,55 @@ public class App {
 
             String linha = entrada.nextLine();
 
+            //Transforma em int
             for (int i = 0; i < linha.length(); i++) {
                 matriz[linhas][i] = linha.charAt(i) == '.' ? 0 : 9;
             }
             linhas++;
+        }
+
+        //Percorre toda a matriz
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                //Se for asterisco, pula
+                if (matriz[i][j] == 9){
+                    continue;
+                }
+
+                //Contador de asteriscos
+                int qnt_ast = 0;
+
+                //Começa contar com uma linha/coluna antes até uma linha/coluna depois
+                for (int linha_antes = i - 1; linha_antes <= i + 1; linha_antes++) {
+                    for (int coluna_antes = j - 1; coluna_antes <= j + 1; coluna_antes++) {
+
+                        //Valida se valor é válido (se for borda)
+                        if (linha_antes >= 0 && linha_antes < 9 && coluna_antes >= 0 && coluna_antes < 9) {
+                            //Se tiver asterisco, aumenta a quantidade
+                            if (matriz[linha_antes][coluna_antes] == 9) {
+                                qnt_ast++;
+                            }
+                        }
+                    }
+                }
+                //Coloca a quantidade de asterisco na casa
+                matriz[i][j] = qnt_ast;
+            }
+        }
+
+        //Percorre a matriz novamente
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+
+                if (matriz[i][j] == 9) {
+                    System.out.print("*");
+                } else if (matriz[i][j] == 0) {
+                    System.out.print(".");
+                } else {
+                    System.out.print(matriz[i][j]);
+                }
+            }
+            System.out.println();
         }
     }
 }
