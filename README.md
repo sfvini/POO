@@ -11,9 +11,11 @@
 ## Laboratórios
 
 * [Laboratório 01](lab_01) - Sistema de Controle de Versão
+* [Laboratório 02](lab_02) - Prática com a linguagem Java
 
 ## Aulas
 
 * [Aula 01](aula_01) - 23/02/2026
 * [Aula 02](aula_02) - 02/03/2026
 * [Aula 03](aula_03) - 04/03/2026
+* [Aula 04](aula_04) - 11/03/2026
