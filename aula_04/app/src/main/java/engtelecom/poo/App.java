@@ -6,17 +6,28 @@ package engtelecom.poo;
 public class App {
     public static void main(String[] args) {
 
-        // Cria objeto com base na classe
-        Lampada l = new Lampada();
+// Cria objeto com base na classe
+//        Lampada l = new Lampada();
+//
+// Utiliza os métodos criados
+//        System.out.println(l.isLigada());
+//
+//        l.setLigada();
+//        System.out.println(l.isLigada());
+//
+// Cria segunda lâmpada (mesma classe, objetos separados)
+//        Lampada l2 = new Lampada();
+//        System.out.println(l2.isLigada());
 
-        // Utiliza os métodos criados
-        System.out.println(l.isLigada());
+        Caneta bic = new Caneta();
+        bic.setCor("Vermelho");
+        IO.println(bic.getCor());
 
-        l.setLigada();
-        System.out.println(l.isLigada());
+        bic.setNivelTinta(55);
+        IO.println(bic.getNivelTinta());
 
-        // Cria segunda lâmpada (mesma classe, objetos separados)
-        Lampada l2 = new Lampada();
-        System.out.println(l2.isLigada());
+        bic.setFechada();
+        IO.println(bic.desenhar(3, 5, 66, 55));
+        IO.println(String.format("%.2f", bic.getNivelTinta()));
     }
 }

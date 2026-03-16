@@ -3,7 +3,7 @@ package engtelecom.poo;
 public class Lampada {
 
     // Atributos
-    private boolean ligada = false;
+    private boolean ligada;
 
     // Metodos
     public boolean isLigada() {
