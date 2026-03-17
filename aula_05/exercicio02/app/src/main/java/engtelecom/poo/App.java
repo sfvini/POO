@@ -5,6 +5,10 @@ package engtelecom.poo;
 
 public class App {
     public static void main(String[] args){
+        Personagem personagem = new Personagem();
 
+        personagem.setPersonagem(40, 12);
+        IO.println(personagem.lutar(30));
+        IO.println(personagem.curar(5));
     }
 }
