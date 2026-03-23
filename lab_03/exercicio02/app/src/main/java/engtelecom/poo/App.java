@@ -4,11 +4,10 @@
 package engtelecom.poo;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Horario horario = new Horario();
+        horario.Horario(12, 33, 45);
+
+        IO.println(horario.extenso());
     }
 }
