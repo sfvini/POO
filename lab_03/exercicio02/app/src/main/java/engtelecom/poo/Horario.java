@@ -79,27 +79,32 @@ public class Horario {
         int dHora = (this.hora / 10) * 10;
         int uHora = this.hora % 10;
 
-        String h = (this.hora == 1) ? "uma" : (this.hora == 2) ? "duas" :
-                converterExtenso(dHora) + " " + converterExtenso(uHora);
+        String h = (this.hora == 1) ? "uma" : (this.hora == 2) ? "duas" : (this.hora < 20) ? converterExtenso(this.hora) :
+                converterExtenso(dHora) + " e " + converterExtenso(uHora);
+
+        h += (this.hora == 1) ? " hora, " : " horas, ";
 
         int dMinuto = (this.minuto / 10) * 10;
         int uMinuto = this.minuto % 10;
 
-        String m = converterExtenso(dMinuto) + " " + converterExtenso(uMinuto);
+        String m = converterExtenso(dMinuto) + " e " + converterExtenso(uMinuto);
+
+        m += (this.hora == 1) ? " minuto e " : " minutos e ";
 
         int dSegundo = (this.segundo / 10) * 10;
         int uSegundo = this.segundo % 10;
 
-        String s = converterExtenso(dSegundo) + " " + converterExtenso(uSegundo);
+        String s = converterExtenso(dSegundo) + " e " + converterExtenso(uSegundo);
+        s += (this.hora == 1) ? " segundo" : " segundos";
 
         return h+m+s;
     }
 
     public long emSegundos(){
-        return ((long) hora * 60 * 60) + (minuto * 60L) + segundo;
+        return (hora * 3600L) + (minuto * 60L) + segundo;
     }
 
-//    public long diferenca(Horario horario){
-//        return emSegundos()
-//    }
+    public long diferenca(Horario ho) {
+        return Math.abs(this.emSegundos() - ho.emSegundos());
+    }
 }
