@@ -10,6 +10,12 @@ public class Horario {
     private static final int SEGUNDO_MAX = 59;
     private static final int MIN = 0;
 
+    public Horario() {
+        this.hora = 0;
+        this.minuto = 0;
+        this.segundo = 0;
+    }
+
     public boolean Horario(int h, int m, int s) {
         if (!(h > HORA_MAX || h < MIN || m > MINUTO_MAX || m < MIN || s > SEGUNDO_MAX || s < MIN)) {
             this.hora = h;
@@ -78,23 +84,28 @@ public class Horario {
     public String extenso(){
         int dHora = (this.hora / 10) * 10;
         int uHora = this.hora % 10;
-
-        String h = (this.hora == 1) ? "uma" : (this.hora == 2) ? "duas" : (this.hora < 20) ? converterExtenso(this.hora) :
-                converterExtenso(dHora) + " e " + converterExtenso(uHora);
-
-        h += (this.hora == 1) ? " hora, " : " horas, ";
-
         int dMinuto = (this.minuto / 10) * 10;
         int uMinuto = this.minuto % 10;
-
-        String m = converterExtenso(dMinuto) + " e " + converterExtenso(uMinuto);
-
-        m += (this.hora == 1) ? " minuto e " : " minutos e ";
-
         int dSegundo = (this.segundo / 10) * 10;
         int uSegundo = this.segundo % 10;
 
-        String s = converterExtenso(dSegundo) + " e " + converterExtenso(uSegundo);
+        //HORA
+        String h = (this.hora == 0) ? "zero" : (this.hora == 1) ? "uma" : (this.hora == 2) ? "duas" : (this.hora < 20) ? converterExtenso(this.hora) :
+                (uHora == 1) ? converterExtenso(dHora) + " e uma" :  (uHora == 2) ? converterExtenso(dHora) + " e duas" :
+                        converterExtenso(dHora) + " e " + converterExtenso(uHora);
+
+        h += (this.hora == 1) ? " hora," : " horas,";
+
+        //MINUTO
+        String m = (this.minuto == 0) ? "zero" : (this.minuto < 20) ? converterExtenso(this.minuto) :
+                converterExtenso(dMinuto) + " e " + converterExtenso(uMinuto);
+
+        m += (this.minuto == 1) ?  " minuto e " : " minutos e ";
+
+        //SEGUNDO
+        String s = (this.segundo == 0) ? "zero" : (this.segundo == 1) ? "um" : (this.segundo < 20) ? converterExtenso(this.segundo) :
+                converterExtenso(dSegundo) + " e " + converterExtenso(uSegundo);
+
         s += (this.hora == 1) ? " segundo" : " segundos";
 
         return h+m+s;
