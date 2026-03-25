@@ -5,6 +5,23 @@ package engtelecom.poo;
 
 public class App {
     public static void main(String[] args) {
+        Robo robo = new Robo("cleber");
 
+        IO.println(robo.getPosicao());
+        IO.println(robo.andar(29.3, 4.1));
+
+        IO.println(robo.getPosicao());
+        IO.println(robo.andar(59.3, 77.1));
+
+        IO.println(robo.getPosicao());
+
+        Robo robo2 = new Robo("udenir");
+        Robo robo3 = new Robo("merluza");
+
+        IO.println(robo.getQuantidadeRobos());
+
+        IO.println(robo);
+        IO.println(robo2);
+        IO.println(robo3);
     }
 }
