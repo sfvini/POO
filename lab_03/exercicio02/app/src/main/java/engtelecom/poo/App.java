@@ -6,14 +6,17 @@ package engtelecom.poo;
 public class App {
     public static void main(String[] args) {
         Horario horario = new Horario();
+        Horario horario2 = new Horario();
 
-        horario.Horario(16, 33, 45);
+        horario.Horario(16, 03, 01);
         IO.println(horario.extenso());
 
-        horario.Horario(22, 56, 00);
+        horario2.Horario(22, 56, 00);
         IO.println(horario.extenso());
 
-        horario.Horario(05, 01);
-        IO.println(horario.extenso());
+        IO.println(horario.emSegundos());
+        IO.println(horario2.emSegundos());
+
+        IO.println(horario.diferenca(horario2));
     }
 }
