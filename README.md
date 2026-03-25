@@ -12,6 +12,7 @@
 
 * [Laboratório 01](lab_01) - Sistema de Controle de Versão
 * [Laboratório 02](lab_02) - Prática com a linguagem Java
+* [Laboratório 03](lab_03) - POO
 
 ## Aulas
 
