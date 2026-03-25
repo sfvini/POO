@@ -1,115 +1,85 @@
 package engtelecom.poo;
 
 public class Retangulo {
-    private int largura;
     private int altura;
-    private String codificacao;
-
-    private static final int LARGURA_PADRAO = 4;
-    private static final int ALTURA_PADRAO = 3;
-    private static final String COD_PADRAO = "ASCII";
-
-    public Retangulo(int largura, int altura, String codificacao) {
-        if (largura > 0 && altura > 0) {
-            this.largura = largura;
-            this.altura = altura;
-        } else {
-            this.largura = LARGURA_PADRAO;
-            this.altura = ALTURA_PADRAO;
-        }
-
-        if (codificacao != null && (codificacao.equalsIgnoreCase("ASCII") || codificacao.equalsIgnoreCase("UTF8"))) {
-            this.codificacao = codificacao.toUpperCase();
-        } else {
-            this.codificacao = COD_PADRAO;
-        }
-    }
+    private int largura;
+    private String cod;
 
     public Retangulo() {
-        this.altura = ALTURA_PADRAO;
-        this.largura = LARGURA_PADRAO;
-        this.codificacao = COD_PADRAO;
+            this.altura = 3;
+            this.largura = 4;
+            this.cod = "ascii";
     }
 
-    public boolean setLargura(int largura) {
-        if (largura > 0) {
-            this.largura = largura;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean setAltura(int altura) {
-        if (altura > 0) {
+    public Retangulo(int altura, int largura, String cod) {
+        if (altura <= 0 || largura <= 0 || !cod.equalsIgnoreCase("utf8")) {
+            this.altura = 3;
+            this.largura = 4;
+            this.cod = "ascii";
+        } else {
             this.altura = altura;
-            return true;
+            this.largura = largura;
+            this.cod = cod.toLowerCase();
         }
-        return false;
-    }
-
-    public boolean setCodificacao(String codificacao) {
-        if (codificacao != null && (codificacao.equalsIgnoreCase("ASCII") || codificacao.equalsIgnoreCase("UTF8"))) {
-            this.codificacao = codificacao.toUpperCase();
-            return true;
-        }
-        return false;
-    }
-
-    public int getLargura() {
-        return largura;
     }
 
     public int getAltura() {
         return altura;
     }
 
-    public String getCodificacao() {
-        return codificacao;
+    public boolean setAltura(int altura) {
+        if (altura <= 0) return false;
+        this.altura = altura;
+        return true;
     }
 
-
-    public int area() {
-        return largura * altura;
+    public int getLargura() {
+        return largura;
     }
 
-    public int perimetro() {
+    public boolean setLargura(int largura) {
+        if (largura <= 0) return false;
+        this.largura = largura;
+        return true;
+    }
+
+    public String getCod() {
+        return cod;
+    }
+
+    public boolean setCod(String cod) {
+        if (!cod.equals("ascii") && !cod.equals("UTF8")) return false;
+        this.cod = cod;
+        return true;
+    }
+
+    public int perimetro(int largura, int altura) {
         return 2 * (largura + altura);
+    }
+
+    public int area(int largura, int altura) {
+        return largura * altura;
     }
 
     @Override
     public String toString() {
-        String resultado = "";
+        StringBuilder mensagem = new StringBuilder();
+        String pontaES = (cod.equals("ascii")) ? "+" : "\u250c";
+        String pontaDS = (cod.equals("ascii")) ? "+" : "\u2510";
+        String pontaEI = (cod.equals("ascii")) ? "+" : "\u2514";
+        String pontaDI = (cod.equals("ascii")) ? "+" : "\u2518";
+        String linha = (cod.equals("ascii")) ? "-" : "\u2500";
+        String coluna = (cod.equals("ascii")) ? "|" : "\u2502";
+        String espaco = " ";
 
-        resultado += (this.codificacao.equals("UTF8") ? "┌" : "+");
-        for (int i = 0; i < largura - 2; i++) {
-            resultado += (this.codificacao.equals("UTF8") ? "─" : "-");
-        }
-        if (largura > 1) {
-            resultado += (this.codificacao.equals("UTF8") ? "┐" : "+");
-        }
-        resultado += "\n";
+        String teto = pontaES + linha.repeat(this.largura - 2) + pontaDS + "\n";
+        String meio = coluna + espaco.repeat(this.largura - 2) + coluna + "\n";
+        String chao = pontaEI + linha.repeat(this.largura - 2) + pontaDI + "\n";
 
-        for (int i = 0; i < altura - 2; i++) {
-            resultado += (this.codificacao.equals("UTF8") ? "│" : "|");
-            for (int j = 0; j < largura - 2; j++) {
-                resultado += " ";
-            }
-            if (largura > 1) {
-                resultado += (this.codificacao.equals("UTF8") ? "│" : "|");
-            }
-            resultado += "\n";
-        }
+        mensagem.append(teto);
+        mensagem.append(meio.repeat(this.altura - 2));
+        mensagem.append(chao);
 
-        if (altura > 1) {
-            resultado += (this.codificacao.equals("UTF8") ? "└" : "+");
-            for (int i = 0; i < largura - 2; i++) {
-                resultado += (this.codificacao.equals("UTF8") ? "─" : "-");
-            }
-            if (largura > 1) {
-                resultado += (this.codificacao.equals("UTF8") ? "┘" : "+");
-            }
-        }
-
-        return resultado;
+        return mensagem.toString();
     }
 }

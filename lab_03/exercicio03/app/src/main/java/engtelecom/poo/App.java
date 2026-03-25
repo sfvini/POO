@@ -5,30 +5,8 @@ package engtelecom.poo;
 
 public class App {
     public static void main(String[] args) {
+        Retangulo retangulo = new Retangulo(12, 12, "utf8");
 
-        Retangulo r1 = new Retangulo();
-        System.out.println("Área: " + r1.area());
-        System.out.println("Perímetro: " + r1.perimetro());
-        System.out.println(r1);
-
-        Retangulo r2 = new Retangulo(10, 5, "UTF8");
-        System.out.println(r2);
-
-        Retangulo r3 = new Retangulo(-5, 0, "TESTE");
-        System.out.println("Largura: " + r3.getLargura());
-        System.out.println("Altura: " + r3.getAltura());
-        System.out.println("Codificação: " + r3.getCodificacao());
-        System.out.println(r3);
-
-        Retangulo r4 = new Retangulo(5, 3, "ASCII");
-        boolean ok = r4.setLargura(8);
-
-        System.out.println("Tentativa de mudar largura para 8: " + (ok ? "Sucesso" : "Falha"));
-
-        ok = r4.setAltura(-2);
-        System.out.println("Tentativa de mudar altura para -2 (deve falhar): " + (ok ? "Sucesso" : "Falha"));
-
-        r4.setCodificacao("UTF8");
-        System.out.println("Resultado final r4:\n" + r4);
+        IO.println(retangulo);
     }
 }
