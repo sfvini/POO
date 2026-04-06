@@ -58,12 +58,9 @@ public class App {
                         break;
                     }
 
-                    for (Conta c : contas) {
-                        if (c.getNumConta() == nSacar) {
-                            c.sacar(vSacar);
-                            break;
-                        }
-                    }
+                    contas.forEach(e -> {
+                        if (e.getNumConta() == nSacar) e.sacar(vSacar);
+                    });
                     break;
 
                 case 4:
@@ -75,12 +72,10 @@ public class App {
                         break;
                     }
 
-                    for (Conta c : contas) {
-                        if (c.getNumConta() == nDepositar) {
-                            c.depositar(vDepositar);
-                            break;
-                        }
-                    }
+                    contas.forEach(e -> {
+                        if (e.getNumConta() == nDepositar) e.depositar(vDepositar);
+                    });
+
                     break;
 
                 case 5:
