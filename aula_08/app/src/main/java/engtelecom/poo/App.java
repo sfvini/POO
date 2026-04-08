@@ -9,8 +9,14 @@ public class App {
 
     private final static HashMap<String, Livro> biblioteca = new HashMap<>();
 
+    //1
     private static void cadastrar(){
         String isbn = IO.readln("ISBN: ");
+        if (biblioteca.containsKey(isbn)) {
+            System.out.println("Erro: Já existe um livro cadastrado com este ISBN!");
+            return;
+        }
+
         String titulo = IO.readln("TÍTULO: ");
         String autor = IO.readln("AUTOR: ");
         int ano = Math.abs(Integer.parseInt(IO.readln("ANO: ")));
@@ -18,18 +24,66 @@ public class App {
         System.out.println("Livro cadastrado com sucesso!");
     }
 
+    //2
     private static void listar(){
-        for (Livro livro : biblioteca.values()){
-            System.out.println(livro);
+        for (Livro livro : biblioteca.values()) {
+            System.out.println(livro.getIsbn());
+            System.out.println(livro.getTitulo());
         }
     }
 
+    //3
     private static void consultarPorIsbn(){
         String isbn = IO.readln("ISBN: ");
         Livro l = biblioteca.get(isbn);
         if (l != null) System.out.println(l);
     }
 
+    //4
+    private static void consultarPorAutor() {
+        String autor = IO.readln("Autor: ");
+        boolean c = false;
+
+        for (Livro l : biblioteca.values()) {
+            if (l.getAutor().equalsIgnoreCase(autor)) System.out.println(l);
+            c = true;
+        }
+
+        if (!c) {
+            System.out.println("Nenhum livro encontrado.");
+        }
+    }
+
+    //5
+    private static void atualizar(){
+        String isbn = IO.readln("ISBN: ");
+        Livro l = biblioteca.get(isbn);
+
+        if (l != null) {
+            String titulo = IO.readln("TÍTULO: ");
+            String autor = IO.readln("AUTOR: ");
+            int ano = Math.abs(Integer.parseInt(IO.readln("ANO: ")));
+
+            l.setAno(ano);
+            l.setAutor(autor);
+            l.setTitulo(titulo);
+            System.out.println("Livro alterado com sucesso!");
+        }
+        else {
+            System.out.println("Livro não encontrado.");
+        }
+    }
+
+    //6
+    private static void remover(){
+        String isbn = IO.readln("ISBN: ");
+
+        if (biblioteca.remove(isbn) != null) {
+            System.out.println("Livro removido com sucesso!");
+        } else {
+            System.out.println("Livro não encontrado.");
+        }
+    }
     private void menu() {
         System.out.println("BIBLIOTECA");
         System.out.println("1. Cadastrar livro");
@@ -51,44 +105,15 @@ public class App {
             opcao = Integer.parseInt(IO.readln());
 
             switch (opcao) {
-                case 1:
-                    cadastrar();
-                    break;
-
-                case 2:
-                    listar();
-                    break;
-
-                case 3:
-                    consultarPorIsbn();
-                    break;
-
-                case 4:
-                    break;
-
-                case 5:
-                    String l = IO.readln("Digite o ISBN: ");
-                    if (biblioteca.containsKey(l)) {
-
-                    } else {
-                        System.out.println("Livro não encontrado");
-                    }
-                    break;
-
-                case 6:
-                    String l = IO.readln("Digite o ISBN: ");
-                    if (biblioteca.containsKey(l)) {
-                        biblioteca.remove(l);
-                    } else {
-                        System.out.println("Livro não encontrado");
-                    }
-                    break;
-
-                default:
-                    System.out.println("Opção inválida!");
-                    break;
+                case 1 -> cadastrar();
+                case 2 -> listar();
+                case 3 -> consultarPorIsbn();
+                case 4 -> consultarPorAutor();
+                case 5 -> atualizar();
+                case 6 -> remover();
+                case 7 -> System.out.println("Encerrando");
+                default -> System.out.println("Opção inválida!");
             }
-
         } while (opcao != 7);
     }
 }

@@ -16,11 +16,11 @@ public class Livro {
     @Override
     public String toString() {
         return String.format("""
-                ISBN: %s
-                Título: %s
-                Autor: "%s
-                Ano: %d
-                """, isbn, titulo, autor, ano);
+            ISBN: %s
+            Título: %s
+            Autor: %s
+            Ano: %d
+            """, isbn, titulo, autor, ano);
     }
 
     public String getIsbn() {
