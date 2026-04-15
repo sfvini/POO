@@ -73,7 +73,7 @@ classDiagram
 
     class Livro{
         - titulo: String
-        - autor: Pessoa
+        - autor: ArrayList~Pessoa~
         - capitulos: ArrayList~Capitulo~
         + Livro(t: String, a: Pessoa)
         + adicionaCapitulo(t: String): void
