@@ -30,7 +30,7 @@ public class Aviao {
 
         this.motores = new ArrayList<>();
 
-        for (int i = 0; i < quantidadeMotores; i++) {
+        for (int i = 0; i < this.quantidadeMotores; i++) {
             motores.add(new Motor(tipoMotor));
         }
     }
@@ -41,12 +41,16 @@ public class Aviao {
                 "Capacidade máxima: " + (numMaxTrip + numMaxPass)  + "\n" +
                 "Peso máximo: " + pesoMax + "\n" +
                 "Combustível máximo: " + combusMax + "\n" +
-                "Motores: " + quantidadeMotores + "\n" + motores.getFirst() + "\n" );
+                "Motores: " + quantidadeMotores + "\n" + motores + "\n" );
     }
 
-    public boolean isLigada(int i, boolean all){
-        if (!all){
-            motores.get(i);
-        }
+    public void isLigada(int i, boolean all){
+       if (i <= quantidadeMotores) {
+           if (all) {
+               motores.forEach(Motor::isLigada);
+           } else {
+               motores.get(i).isLigada();
+           }
+       }
     }
 }

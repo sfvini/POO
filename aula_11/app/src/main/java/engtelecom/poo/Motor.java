@@ -14,10 +14,11 @@ public class Motor {
     @Override
     public String toString() {
         return String.format(
-                "Tipo: " + tipo + "\n" + "Ligado: " + ligado + "\n" +
-                "Consumo: " + consumo + "\n"
+                "Tipo: " + tipo + "\n" + "Ligado: " + ligado + "\n" + "Consumo: " + consumo + "\n"
         );
     }
 
-
+    public void isLigada() {
+        this.ligado = !ligado;
+    }
 }
