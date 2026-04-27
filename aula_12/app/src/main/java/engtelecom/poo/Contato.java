@@ -14,16 +14,29 @@ public class Contato {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.dataNasc = dataNasc;
+
         this.telefones = new ArrayList<>();
         this.emails = new ArrayList<>();
     }
 
     public boolean addTelefone(String rotulo, String valor) {
-        return telefones.add(new Telefone(rotulo, valor));
+        String eR = "^[0-9]+$";
+        if (valor.matches(eR)) {
+            return telefones.add(new Telefone(rotulo, valor));
+        }
+        else {
+            return false;
+        }
     }
 
     public boolean addEmail(String rotulo, String valor) {
-        return emails.add(new Email(rotulo, valor));
+        String eR = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+        if (valor.matches(eR)) {
+            return emails.add(new Email(rotulo, valor));
+        }
+        else {
+            return false;
+        }
     }
 
     public boolean removeTelefone(String rotulo) {
