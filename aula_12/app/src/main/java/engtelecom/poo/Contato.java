@@ -70,22 +70,14 @@ public class Contato {
         sb.append("Nascimento: ").append(dataNasc).append("\n");
 
         sb.append("Telefones:\n");
-        if (telefones.isEmpty()) {
-            sb.append("  Nenhum\n");
-        } else {
             for (Telefone t : telefones) {
                 sb.append("  ").append(t).append("\n");
             }
-        }
 
         sb.append("Emails:\n");
-        if (emails.isEmpty()) {
-            sb.append("  Nenhum\n");
-        } else {
             for (Email e : emails) {
                 sb.append("  ").append(e).append("\n");
             }
-        }
 
         return sb.toString();
     }
