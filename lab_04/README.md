@@ -76,7 +76,7 @@ classDiagram
         - avalicoes: ArrayList~Avalicao~
         + Filme(titulo: String, ano: int, genero: String, diretor: String) 
         + addAtor(nome: String) boolean
-        + addAvaliacao()
+        + addAvaliacao(nota: int, comentario: String) boolean
     }
     
     class Ator {
@@ -93,5 +93,7 @@ classDiagram
     }
     
     class Avalicao {
+        - nota: int
+        - comentario: String
     }
 ```
