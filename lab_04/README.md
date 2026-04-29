@@ -27,10 +27,10 @@ classDiagram
         - email: String
         - enderecos: ArrayList~Endereco~
         - pedidos: ArrayList~Pedido~
-        + addPedido(data: LocalDate, situacao: String): boolean
-        + addProduto(idPedido: int, idProduto: int, quantidade: int): boolean
-        + removeProduto(idPedido: int, idProduto: int, quantidade: int): boolean
-        + addEndereco(cep: String, rua: String, numero: int, complemento: String): boolean
+        + addPedido(data: LocalDate, situacao: String) boolean
+        + addProduto(idPedido: int, idProduto: int, quantidade: int) boolean
+        + removeProduto(idPedido: int, idProduto: int, quantidade: int) boolean
+        + addEndereco(cep: String, rua: String, numero: int, complemento: String) boolean
         + Cliente(nome: String, email: String)
     }
 
@@ -39,8 +39,8 @@ classDiagram
         - data: LocalDate
         - situacao: String
         - produtos: HashMap~Produto, Integer~
-        + addProduto(id: int, quantidade: int): boolean
-        + removeProduto(id: int, quantidade: int): boolean
+        + addProduto(id: int, quantidade: int) boolean
+        + removeProduto(id: int, quantidade: int) boolean
         + Pedido(data: LocalDate, situacao: String)
     }
 
@@ -63,25 +63,35 @@ usuário pode avaliar um ou mais filmes. Uma avaliação tem uma nota (de 1 a 5)
 classDiagram
     direction LR
 
+    Ator"1..*" --o "1"Filme
+    Avalicao"0..*" --* "1"Usuario
     Avalicao"0..*" --* "1"Filme
-    Produto"0..*" --o "1"Pedido
-    Endereco"1..*" --* "1"Cliente
 
     class Filme {
-        - descricao: String 
-        - preco: double
-        - quantidade: int
+        - titulo: String
+        - ano:  int
+        - genero: String
+        - diretor: String
+        - atores: ArrayList~Ator~
+        - avalicoes: ArrayList~Avalicao~
+        + Filme(titulo: String, ano: int, genero: String, diretor: String) 
+        + addAtor(nome: String) boolean
+        + addAvaliacao()
     }
     
-    class Atores {
-        - nome
+    class Ator {
+        - nome: String
+        - dataNasc: LocalDate
+        + Ator(nome: String, dataNasc: LocalDate)
     }
     
-        class Usuario {
-        
+    class Usuario {
+        - nome: String
+        - email: String
+        - senha: String
+        - avalicoes: ArrayList~Avalicao~
     }
     
     class Avalicao {
-        
     }
 ```
