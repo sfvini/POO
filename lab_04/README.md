@@ -123,9 +123,9 @@ classDiagram
         - corridas: ArrayList~Corrida~
         - cnpj: int
         + Empresa(cnpj: int)
-        + addMotorista(motorista: Motorista): boolean
-        + addVeiculo(veiculo: Veiculo): boolean
-        + addCorrida(corrida: Corrida): boolean
+        + addMotorista(motorista: Motorista) boolean
+        + addVeiculo(veiculo: Veiculo) boolean
+        + addCorrida(corrida: Corrida) boolean
     }
     
     class Corrida {
