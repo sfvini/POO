@@ -28,7 +28,7 @@ classDiagram
         - enderecos: ArrayList~Endereco~
         - pedidos: ArrayList~Pedido~
         + addPedido(data: LocalDate, situacao: String) boolean
-        + addProduto(idPedido: int, idProduto: int, quantidade: int, catalogo: ArrayList~Produto~) boolean
+        + addProduto(idPedido: int, idProduto: int, quantidade: int) boolean
         + removeProduto(idPedido: int, idProduto: int, quantidade: int) boolean
         + addEndereco(cep: String, rua: String, numero: int, complemento: String) boolean
         + Cliente(nome: String, email: String)
