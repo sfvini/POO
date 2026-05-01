@@ -28,7 +28,7 @@ classDiagram
         - enderecos: ArrayList~Endereco~
         - pedidos: ArrayList~Pedido~
         + addPedido(data: LocalDate, situacao: String) boolean
-        + addProduto(idPedido: int, idProduto: int, quantidade: int) boolean
+        + addProduto(idPedido: int, idProduto: int, quantidade: int, catalogo: ArrayList~Produto~) boolean
         + removeProduto(idPedido: int, idProduto: int, quantidade: int) boolean
         + addEndereco(cep: String, rua: String, numero: int, complemento: String) boolean
         + Cliente(nome: String, email: String)
@@ -39,8 +39,8 @@ classDiagram
         - data: LocalDate
         - situacao: String
         - produtos: HashMap~Produto, Integer~
-        + addProduto(id: int, quantidade: int) boolean
-        + removeProduto(id: int, quantidade: int) boolean
+        + addProduto(produto: Produto, quantidade: int) boolean
+        + removeProduto(idProduto: int, quantidade: int) boolean
         + Pedido(data: LocalDate, situacao: String)
     }
 
