@@ -29,18 +29,25 @@ public class Pedido {
         return id;
     }
 
-public boolean removeProduto(int idProduto, int quantidade) {
+    public boolean removeProduto(int idProduto, int quantidade) {
+        Produto produtoParaRemover = null;
+
         for (Produto p : produtos.keySet()) {
             if (p.getId() == idProduto) {
                 int qtdAtual = produtos.get(p);
                 if (quantidade >= qtdAtual) {
-                    produtos.remove(p);
-                    return true;
+                    produtoParaRemover = p;
                 } else {
                     produtos.put(p, qtdAtual - quantidade);
+                    return true;
                 }
-                return true;
+                break;
             }
+        }
+
+        if (produtoParaRemover != null) {
+            produtos.remove(produtoParaRemover);
+            return true;
         }
         return false;
     }

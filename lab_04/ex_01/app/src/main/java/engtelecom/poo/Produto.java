@@ -18,6 +18,10 @@ public class Produto {
         return quantidadeEst;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
     public int getId() {
         return id;
     }
