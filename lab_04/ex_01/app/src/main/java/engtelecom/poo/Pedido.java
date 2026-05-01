@@ -17,14 +17,31 @@ public class Pedido {
         this.produtos = new HashMap<>();
     }
 
-    public boolean addProduto(Produto produto, int quantidade){
-        produtos.put(produto, quantidade);
-        return true;
+    public boolean addProduto(Produto produto, int quantidade) {
+        if (produto.getQuantidadeEst() >= quantidade) {
+            produtos.put(produto, produtos.getOrDefault(produto, 0) + quantidade);
+            return true;
+        }
+        return false;
     }
 
-    public boolean removeProduto(Produto produto, int quantidade){
-        int quantidadeAtual = produtos.get(produto);
-        produtos.put(produto, quantidadeAtual - quantidade);
-        return true;
+    public int getId() {
+        return id;
+    }
+
+public boolean removeProduto(int idProduto, int quantidade) {
+        for (Produto p : produtos.keySet()) {
+            if (p.getId() == idProduto) {
+                int qtdAtual = produtos.get(p);
+                if (quantidade >= qtdAtual) {
+                    produtos.remove(p);
+                    return true;
+                } else {
+                    produtos.put(p, qtdAtual - quantidade);
+                }
+                return true;
+            }
+        }
+        return false;
     }
 }
