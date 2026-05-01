@@ -21,20 +21,14 @@ public class Cliente {
         return pedidos.add(p);
     }
 
-    public boolean addProduto(int idPedido, int idProduto, int quantidade, ArrayList<Produto> catalogo) {
+    public boolean addProduto(int idPedido, Produto produto, int quantidade) {
         for (Pedido p : this.pedidos) {
             if (p.getId() == idPedido) {
-
-                for (Produto prod : catalogo) {
-                    if (prod.getId() == idProduto) {
-                        return p.addProduto(prod, quantidade);
-                    }
-                }
+                return p.addProduto(produto, quantidade);
             }
         }
         return false;
     }
-
     public boolean removeProduto(int idPedido, int idProduto, int quantidade) {
         for (Pedido p : pedidos) {
             if (p.getId() == idPedido) {
