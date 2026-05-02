@@ -21,4 +21,8 @@ public class Passageiro {
         }
         return false;
     }
+
+    public String getNome() {
+        return nome;
+    }
 }

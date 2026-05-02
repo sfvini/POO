@@ -22,4 +22,8 @@ public class Reserva {
 
         this.assento = assento;
     }
+
+    public String getAssento() {
+        return assento;
+    }
 }

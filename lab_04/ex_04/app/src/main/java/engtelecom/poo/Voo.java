@@ -26,4 +26,8 @@ public class Voo {
         }
         return false;
     }
+
+    public String getDestino() {
+        return destino;
+    }
 }
