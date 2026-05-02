@@ -15,7 +15,11 @@ public class Usuario {
         this.avaliacoes = new ArrayList<>();
     }
 
-    public boolean addAvaliacao(Avaliacao avaliacao){
-        return this.avaliacoes.add(avaliacao);
+    public String getNome() {
+        return nome;
+    }
+
+    public void addAvaliacao(Avaliacao avaliacao){
+        this.avaliacoes.add(avaliacao);
     }
 }
