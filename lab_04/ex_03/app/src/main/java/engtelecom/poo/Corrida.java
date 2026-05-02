@@ -24,4 +24,8 @@ public class Corrida {
             this.veiculo = new Veiculo("Indefinido", "000-0000", 0);
         }
     }
+
+    public double getDistancia() {
+        return distancia;
+    }
 }

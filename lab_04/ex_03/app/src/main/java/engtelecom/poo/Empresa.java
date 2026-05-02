@@ -15,18 +15,16 @@ public class Empresa {
         this.corridas = new ArrayList<>();
     }
 
-    public boolean addMotorista(Motorista motorista) {
+    public void addMotorista(Motorista motorista) {
         if (motorista != null) {
-            return this.motoristas.add(motorista);
+            this.motoristas.add(motorista);
         }
-        return false;
     }
 
-    public boolean addVeiculo(Veiculo veiculo) {
+    public void addVeiculo(Veiculo veiculo) {
         if (veiculo != null) {
-            return this.veiculos.add(veiculo);
+            this.veiculos.add(veiculo);
         }
-        return false;
     }
 
     public boolean addCorrida(Corrida corrida) {

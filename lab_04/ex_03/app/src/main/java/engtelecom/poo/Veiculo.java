@@ -10,4 +10,13 @@ public class Veiculo {
         this.placa = placa;
         this.ano = ano;
     }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
 }
