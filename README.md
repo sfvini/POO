@@ -14,6 +14,7 @@
 * [Laboratório 02](lab_02) - Prática com a linguagem Java
 * [Laboratório 03](lab_03) - POO
 * [Laboratório 04](lab_04) - UML
+* [Laboratório 05](lab_05) - Desenho
 
 ## Aulas
 
