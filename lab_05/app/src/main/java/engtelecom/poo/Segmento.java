@@ -8,16 +8,19 @@ public class Segmento {
     private double[] x;
     private double[] y;
 
+    // Cria o segmento com base nas coordenadas
     public Segmento(double[] x, double[] y) {
         this.x = x;
         this.y = y;
         this.ligado = false;
     }
 
+    // Liga e desliga
     public void setLigado(boolean ligado) {
         this.ligado = ligado;
     }
 
+    // Desenha o segmento ligado ou desligado
     public void desenhar(Draw desenho, Color cor) {
         if (this.ligado) {
             desenho.setPenColor(cor);
