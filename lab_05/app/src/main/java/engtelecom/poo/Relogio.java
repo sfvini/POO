@@ -13,4 +13,7 @@ public class Relogio {
   private double x;
   private double y;
   private double tamanho;
+
+  public Relogio(hora: int, minuto: int, segundo: int, cor: Color, x: double, y: double, tamanho: double){
+                 
 }
