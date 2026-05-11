@@ -17,8 +17,8 @@ classDiagram
             - y: double
             - tamanho: double
             + Relogio(hora: int, minuto: int, segundo: int, cor: Color, x: double, y: double, tamanho: double)
-            + LigarDisplay(numero: int)
-            + desenhar(desenho: Draw)
+            + LigarDisplay()
+            + desenhar(desenho: Draw, cor Color)
             + atualizarTempo()
         }
 

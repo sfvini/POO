@@ -14,6 +14,28 @@ public class Relogio {
   private double y;
   private double tamanho;
 
-  public Relogio(hora: int, minuto: int, segundo: int, cor: Color, x: double, y: double, tamanho: double){
-                 
+  public Relogio(int hora, int minuto, int segundo, Color cor, double x, double y, double tamanho) {
+    this.displays = new ArrayList<>();
+    this.hora = hora;
+    this.minuto = minuto;
+    this.segundo = segundo;
+    this.cor = cor;
+    this.x = x;
+    this.y = y;
+    this.tamanho = tamanho;
+  }
+
+  public void ligarDisplay(){
+
+  }
+
+  public void desenhar(Draw desenho, Color cor){
+      displays.forEach(display -> {
+        display.desenhar(desenho, cor);
+      });
+  }
+
+  public void atualizarTempo(){
+
+  }
 }
