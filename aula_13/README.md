@@ -91,22 +91,22 @@ classDiagram
     Animal <|-- Ave
     Animal <|-- Mamifero
     Animal <|-- Tubarao
-    Ave <|-- Arara
-    Ave <|-- Galinha
-    Mamifero <|-- Gato
-    Mamifero <|-- Cachorro
-    Mamifero <|-- Baleia
+ 
     
     class Animal {
         
     }
     
+    class Peixe {
+        - nadadeiras: int
+    }
+    
     class Ave {
-        
+       asas: int 
     }
 
     class Mamifero {
-        
+        mamas: int
     }
 
     class Gato {
