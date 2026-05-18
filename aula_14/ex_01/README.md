@@ -3,19 +3,34 @@
 ```mermaid
 
 classDiagram
-    direction TB
-    
+direction TB
+
+    class Coletador {
+        <<interface>>
+        + coletarMadeira() String
+        + coletarOuro() String
+    }
+
+    class Personagem {
+        <<abstract>>
+        # hp: int
+        # dano: int
+        # vel: double
+        + mover() String
+    }
+
+    class Guerreiro {
+        <<interface>>
+        + atacar() String
+    }
+
     Personagem <|-- Aldeao
     Personagem <|-- Arqueiro
     Personagem <|-- Cavaleiro
-
-    class Personagem {
-        - nome: String
-        - hp: int
-        - dano: int
-        - vel: double
-        + mover(x: int, y: int) String
-        + atacar() String
-        + Personagem(hp: int, dano: int, vel: double, nome: String)
-    }
+    
+    Coletador <|.. Aldeao
+    Guerreiro <|.. Aldeao
+    
+    Guerreiro <|.. Arqueiro
+    Guerreiro <|.. Cavaleiro
 ```
