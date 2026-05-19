@@ -10,29 +10,21 @@ import java.util.concurrent.TimeUnit;
 
 public class App {
     public static void main(String[] args) throws InterruptedException {
-//        Draw draw = new Draw();
-//        draw.setXscale(0,800);
-//        draw.setYscale(0,800);
-//        draw.setCanvasSize(800,800);
-//
-//        draw.enableDoubleBuffering();
-//
-//        draw.setFontSize(30);
-//
-//        for (int i = 1; i <= 10; i++) {
-//           draw.clear();
-//           draw.text(400,400, "" + i);
-//           draw.show();
-//           TimeUnit.SECONDS.sleep(1);
-//           draw.clear();
-//        }
-//
-//        draw.setPenColor(Color.BLUE);
-//        for (int i = 0; i < 800; i+=50) {
-//            draw.line(i,0,i,800);
-//            draw.line(0,i,800,i);
-//        }
-//
-//        draw.show();
+        Draw desenho = new Draw();
+        desenho.setXscale(0, 1000);
+        desenho.setYscale(0, 1000);
+
+        desenho.enableDoubleBuffering();
+
+        Color corDoRelogio = Color.GREEN;
+        Relogio relogio = new Relogio(23, 59, 50, corDoRelogio, 100, 400, 1);
+
+        while (true) {
+            desenho.clear(Color.BLACK);
+            relogio.desenhar(desenho, corDoRelogio);
+            desenho.show();
+            relogio.atualizarTempo();
+            TimeUnit.SECONDS.sleep(1);
+        }
     }
 }
