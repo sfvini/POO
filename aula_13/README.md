@@ -1,112 +1,187 @@
-# Escola
+## Exemplo: Sistema para cadastro de produtos
+
 ```mermaid
 classDiagram
-    
-    Pessoa <|-- Aluno
-    Pessoa <|-- Professor
-    Pessoa <|-- Cargo
-    
-    class Pessoa {
-        id: int
-        nome: String
-    }
-    
-    class Aluno {
-        matricula: int
-    }
-    
-    class Professor {
-        disciplinas: String[]
+direction TB
+
+    Telefone"1" *--> "1"Dimensao
+    Telefone <|-- SemFio
+    SemFio"1" *--> "1"Dimensao
+
+    class Telefone {
+        - codigo : int
+        - numSerie : String
+        - modelo : String
+        - peso : double
+        - dimensao : Dimensao
+        + Telefone(c: int, n: String, m: String, p: double. d: Dimensao)
+        + toString() String
     }
 
-    class Cargo {
-        funcao: String 
-%%      DIRETOR/COORDENADOR
+    class Dimensao {
+        - altura : double
+        - largura : double
+        - profundidade : double
+        + Dimensao(a: double, l: double, p: double)
+        + toString() String
+    }
+
+    class SemFio {
+        - frequencia : double
+        - canais : int
+        - distanciaOperacao : double
+        + SemFio(c: int, n: String, m: String, p: double. d: Dimensao, f: double, ca: int, dist: double)
+        + toString() String
     }
 ```
 
-# Livraria
+## ESCOLA
+```mermaid
+classDiagram
+
+    Pessoa <|-- Aluno
+    Pessoa <|-- Professor
+    Professor <|-- Coordenador
+    Pessoa <|-- Diretor
+
+    Professor o-- Disciplina
+    Coordenador o-- Disciplina
+
+    class Pessoa {
+        id : int
+        nome : String
+    }
+
+    class Aluno {
+        matricula : int
+    }
+
+    class Professor {
+        disciplinas : ArrayList~Disciplina~
+    }
+
+    class Disciplina {
+        nome : String
+    }
+
+    class Coordenador{
+        funcao : String
+    }
+
+    class Diretor {
+        - vigencia : int
+    }
+```
+
+## Livraria
 ```mermaid
 classDiagram
 
     Obra <|-- Livro
-    Obra <|-- Revista
-    Revista <|-- Jornal
-    Revista <|-- Gibi
-    
-    class Obra { 
-        
+    Obra <|-- Jornal
+
+
+    Jornal <|-- Revista
+    Jornal <|-- Gibi
+
+    class Obra {
+
     }
-    
+
     class Livro {
         isbn : String
+        titulo : String
     }
-    
+
     class Revista {
-        issn: String
+        
     }
 
     class Jornal {
-        noticia: String
+        issn : String
     }
-    
+
     class Gibi {
+
     }
 ```
 
-# Veiculos
+## Transporte
 ```mermaid
 classDiagram
 
-    Veiculo <|-- Carro
-    Carro <|-- Caminhao
-    Veiculo <|-- Barco
-    Veiculo <|-- Aviao
-    
-    class Veiculo {
-        
-    }
-    
-    class Carro {
-        
+    MeioTransporte <|-- Ar
+    MeioTransporte <|-- Terra
+    MeioTransporte <|-- Agua
+
+    Ar <|-- Aviao
+    Terra <|-- Carro
+    Terra <|-- Caminhao
+    Agua <|-- Barco
+
+    class MeioTransporte {
+        - velocidadeAtual : int
+        + acelerar(n : int) boolean
     }
 
-    class Caminhao {
-        
+    class Ar {
+        - altitudeMaxima : int
     }
-    
+
+    class Terra {
+
+    }
+
+    class Agua {
+        - capacidadeDoLastro : int
+    }
+
+    class Carro {
+
+    }
+
     class Aviao {
-        
+
     }
 
     class Barco {
 
     }
+
+    class Caminhao {
+
+    }
 ```
 
-# Animais
+## Zoológico
 ```mermaid
 classDiagram
 
-    Animal <|-- Ave
     Animal <|-- Mamifero
-    Animal <|-- Tubarao
- 
-    
+    Animal <|-- Ave
+    Animal <|-- Peixe
+    Mamifero <|-- Gato
+    Mamifero <|-- Cachorro
+    Mamifero <|-- Baleia
+    Ave <|-- Arara
+    Ave <|-- Galinha
+    Peixe <|-- Tubarao
+
     class Animal {
-        
-    }
-    
-    class Peixe {
-        - nadadeiras: int
-    }
-    
-    class Ave {
-       asas: int 
+
     }
 
     class Mamifero {
-        mamas: int
+        - quantidadeDeMamas : int
+    }
+
+    class Ave {
+        - quantidadeDeAsas : int
+        - voa : boolean
+    }
+
+    class Peixe {
+        - quantidadeDeNadadeiras : int
     }
 
     class Gato {

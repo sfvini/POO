@@ -10,17 +10,9 @@ import engtelecom.poo.produtos.Telefone;
 public class App {
     public static void main(String[] args) {
         Dimensao d = new Dimensao(12, 5, 4);
-//        Telefone t = new Telefone(10, "numSerie", "modelo", 1.75, d);
-//
         Dimensao dd = new Dimensao(45, 123, 122);
-//        TelSemFio s = new TelSemFio(10, "numSerie2", "modelo2", 4.75, dd, 13.56, 20, 123.45);
-//
-//        IO.println(t);
-//        IO.println(s);
 
             Telefone a = new TelSemFio(10, "numSerie2", "modelo2", 4.75, dd, "13.56", 20, 123.45);
-
-            TelSemFio b = (TelSemFio) a;
 
             Telefone produtos[] = new Telefone[3];
 
