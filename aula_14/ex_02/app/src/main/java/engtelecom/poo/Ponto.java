@@ -1,6 +1,11 @@
 package engtelecom.poo;
 
-public class Ponto {
-    private double x;
-    private double y;
+class Ponto {
+    protected double x;
+    protected double y;
+
+    public Ponto(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
 }
