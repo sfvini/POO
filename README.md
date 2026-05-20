@@ -10,11 +10,11 @@
 
 ## Laboratórios
 
-* [Laboratório 01](lab_01) - Sistema de Controle de Versão
-* [Laboratório 02](lab_02) - Prática com a linguagem Java
-* [Laboratório 03](lab_03) - POO
-* [Laboratório 04](lab_04) - UML
-* [Laboratório 05](lab_05) - Desenho
+* [Laboratório 01](lab_01) - LAB 1 
+* [Laboratório 02](lab_02) - LAB 2
+* [Laboratório 03](lab_03) - LAB 3
+* [Laboratório 04](lab_04) - LAB 4
+* [Laboratório 05](lab_05) - LAB 5
 
 ## Aulas
 
@@ -30,3 +30,5 @@
 * [Aula 10](aula_10) - 13/04/2026
 * [Aula 11](aula_11) - 15/04/2026
 * [Aula 12](aula_12) - 24/04/2026
+* [Aula 11](aula_13) - 11/05/2026
+* [Aula 12](aula_14) - 13/05/2026
