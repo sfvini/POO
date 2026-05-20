@@ -13,7 +13,7 @@ public class App {
 
         for (Personagem p : personagens){
             IO.println(p.atacar());
-            IO.println(p.mover(34, 90));
+            IO.println(p.mover(15, 15));
         }
     }
 }
