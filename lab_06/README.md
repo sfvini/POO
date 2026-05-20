@@ -26,7 +26,8 @@ direction BT
 
     class Cronometro {
         <<abstract>>
-        - progressivo: boolean
+        # progressivo: boolean
+        # atualizarTempo() void
     }
 
     class RelogioDisplay {
@@ -40,6 +41,7 @@ direction BT
     class RelogioAnalogico {
         - ponteiros: ArrayList~Draw~
         - moldura: Draw
+        + atualizarTempo() void
     }
 
     class Display {
