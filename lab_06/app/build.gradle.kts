@@ -15,13 +15,12 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     // Use JUnit Jupiter for testing.
+    implementation(files("libs/algs4.jar"))
     testImplementation(libs.junit.jupiter)
-
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
-    // This dependency is used by the application.
     implementation(libs.guava)
 }
 
