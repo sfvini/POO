@@ -7,8 +7,8 @@ public abstract class Cronometro extends Relogio {
     protected int m_cont;
     protected int s_cont;
 
-    public Cronometro(int x, int y) {
-        super(x, y);
+    public Cronometro(double x, double y) {
+        super((int) x, (int) y);
         setModoRelogioComum();
     }
 
@@ -43,7 +43,7 @@ public abstract class Cronometro extends Relogio {
     }
 
     @Override
-    public void avancarTempo() {
+    public void atualizarTempo() {
         if (this.progressivo) {
             this.s_cont++;
             if (this.s_cont >= 60) {
@@ -68,15 +68,20 @@ public abstract class Cronometro extends Relogio {
                 }
             }
         } else {
-            this.segundos++;
-            if (this.segundos >= 60) {
-                this.segundos = 0;
-                this.minutos++;
-                if (this.minutos >= 60) {
-                    this.minutos = 0;
-                    this.horas = (this.horas + 1) % 24;
+            this.segundo++;
+            if (this.segundo >= 60) {
+                this.segundo = 0;
+                this.minuto++;
+                if (this.minuto >= 60) {
+                    this.minuto = 0;
+                    this.hora = (this.hora + 1) % 24;
                 }
             }
         }
+    }
+
+    @Override
+    public void avancarTempo() {
+        this.atualizarTempo();
     }
 }
