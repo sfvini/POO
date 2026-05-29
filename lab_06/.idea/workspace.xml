@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8df45ca7-9f64-47db-bcb0-ffc92464a6a7" name="Changes" comment="interface e relogio">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioAnalogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioAnalogico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioTextual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,17 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lab_06" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lab_06" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -56,7 +68,7 @@
     &quot;accountId&quot;: &quot;e1304bca-334a-472c-9062-c26d7278efb9&quot;
   }
 }</component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.sdkman/candidates/gradle/9.3.0" javaHome="$USER_HOME$/.sdkman/candidates/java/25.0.2-amzn" gradleVersion="9.3.0" />
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.3.0-bin/79n14ral3mx1ozqr3csh2u872/gradle-9.3.0" javaHome="$USER_HOME$/.sdkman/candidates/java/25.0.2-amzn" gradleVersion="9.3.0" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -77,11 +89,11 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/vini/POO/lab_06/app/libs",
+    "last_opened_file_path": "/home/vini/POO/lab_06",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -89,6 +101,12 @@
       <recent name="$PROJECT_DIR$/app/libs" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

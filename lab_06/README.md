@@ -33,6 +33,7 @@ classDiagram
 
     class RelogioDisplay {
         - displays: ArrayList~Display~
+        - cor: Color
         - modo: int
         - h_cont: int
         - m_cont: int
@@ -40,18 +41,21 @@ classDiagram
         + static final int TAM_PEQUENO
         + static final int TAM_MEDIO
         + static final int TAM_GRANDE
-        + RelogioDisplay(x: double, y: double, tamanho: int)
+        + RelogioDisplay(x: double, y: double, tamanho: int, modo: int)
+        + ligarDisplay() void
         + desenhar(desenho: Draw) void
         + atualizarTempo() void
     }
 
     class RelogioTextual {
-        - tamanhoFonte: int
+        - tFonte: int
+        - cor: Color
+        - fonte: Font
         - modo: int
         - h_cont: int
         - m_cont: int
         - s_cont: int
-        + RelogioTextual(x: double, y: double, tamanhoFonte: int)
+        + RelogioTextual(x: double, y: double, tFonte: int, modo: int, fonte: Font)
         + desenhar(desenho: Draw) void
         + atualizarTempo() void
     }
