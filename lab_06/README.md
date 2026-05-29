@@ -41,7 +41,7 @@ classDiagram
         + static final int TAM_PEQUENO
         + static final int TAM_MEDIO
         + static final int TAM_GRANDE
-        + RelogioDisplay(x: double, y: double, tamanho: int, modo: int)
+        + RelogioDisplay(x: double, y: double, tamanho: int, modo: int, h: int, m: int, s: int)
         + ligarDisplay() void
         + desenhar(desenho: Draw) void
         + atualizarTempo() void
@@ -55,7 +55,7 @@ classDiagram
         - h_cont: int
         - m_cont: int
         - s_cont: int
-        + RelogioTextual(x: double, y: double, tFonte: int, modo: int, fonte: Font)
+        + RelogioTextual(x: double, y: double, tFonte: int, modo: int, fonte: Font, h: int, m: int, s: int)
         + desenhar(desenho: Draw) void
         + atualizarTempo() void
     }

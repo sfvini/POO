@@ -1,36 +1,58 @@
 package engtelecom.poo;
 
 import edu.princeton.cs.algs4.Draw;
+import java.time.LocalTime;
 
 public class RelogioAnalogico extends Relogio {
 
+    //construtor (só funciona como relogio normal)
     public RelogioAnalogico(double x, double y) {
         super(x, y);
+
+        this.hora = LocalTime.now().getHour();
+        this.minuto = LocalTime.now().getMinute();
+        this.segundo = LocalTime.now().getSecond();
     }
 
     @Override
     public void desenhar(Draw desenho) {
+        //tamanho do relogio
         double raio = 100.0;
 
+        //fundo do relogio
         desenho.setPenColor(Draw.WHITE);
         desenho.filledCircle(this.x, this.y, raio);
 
+        //borda do relogio
         desenho.setPenColor(Draw.BLACK);
         desenho.circle(this.x, this.y, raio);
 
+
+        //circulo tem 360°.
+        //o relogio tem 12 horas: 360 / 12 = 30° por hora.
         double anguloHora = Math.toRadians(30.0 * this.hora);
+
+        //o relogio tem 60 minutos: 360 / 60 = 6° por minuto.
         double anguloMinuto = Math.toRadians(6.0 * this.minuto);
+
+        //o relogio tem 60 segundos: 360 / 60 = 6° por segundo.
         double anguloSegundo = Math.toRadians(6.0 * this.segundo);
 
+
+        //cor preta dos ponteiros
         desenho.setPenColor(Draw.BLACK);
+
+        //ponteiro das horas
         desenho.line(this.x, this.y,
                 this.x + (raio * 0.5) * Math.sin(anguloHora),
                 this.y + (raio * 0.5) * Math.cos(anguloHora));
 
+        //ponteiro dos minutos
         desenho.line(this.x, this.y,
                 this.x + (raio * 0.8) * Math.sin(anguloMinuto),
                 this.y + (raio * 0.8) * Math.cos(anguloMinuto));
 
+        //ponteiro dos segundos
         desenho.setPenColor(Draw.RED);
         desenho.line(this.x, this.y,
                 this.x + (raio * 0.85) * Math.sin(anguloSegundo),

@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8df45ca7-9f64-47db-bcb0-ffc92464a6a7" name="Changes" comment="interface e relogio">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioDisplay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioTextual.java" afterDir="false" />
+    <list default="true" id="8df45ca7-9f64-47db-bcb0-ffc92464a6a7" name="Changes" comment="UML e RelogioDisplay">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/Cronometro.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/Cronometro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/Relogio.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/Relogio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioAnalogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioAnalogico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioTextual.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioTextual.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +88,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Gradle.Build lab_06.executor": "Run",
+    "Gradle.lab_06 [:app:engtelecom.poo.App.main()].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -147,13 +152,22 @@
       <option name="project" value="LOCAL" />
       <updated>1779936975281</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="UML e RelogioDisplay">
+      <option name="closed" value="true" />
+      <created>1780022770433</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780022770433</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="foi" />
     <MESSAGE value="segmento e display" />
     <MESSAGE value="interface e relogio" />
-    <option name="LAST_COMMIT_MESSAGE" value="interface e relogio" />
+    <MESSAGE value="UML e RelogioDisplay" />
+    <option name="LAST_COMMIT_MESSAGE" value="UML e RelogioDisplay" />
   </component>
 </project>
