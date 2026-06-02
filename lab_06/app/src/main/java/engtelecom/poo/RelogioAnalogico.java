@@ -1,17 +1,11 @@
 package engtelecom.poo;
 
 import edu.princeton.cs.algs4.Draw;
-import java.time.LocalTime;
 
 public class RelogioAnalogico extends Relogio {
 
-    //construtor (só funciona como relogio normal)
     public RelogioAnalogico(double x, double y) {
         super(x, y);
-
-        this.hora = LocalTime.now().getHour();
-        this.minuto = LocalTime.now().getMinute();
-        this.segundo = LocalTime.now().getSecond();
     }
 
     @Override
@@ -27,7 +21,6 @@ public class RelogioAnalogico extends Relogio {
         desenho.setPenColor(Draw.BLACK);
         desenho.circle(this.x, this.y, raio);
 
-
         //circulo tem 360°.
         //o relogio tem 12 horas: 360 / 12 = 30° por hora.
         double anguloHora = Math.toRadians(30.0 * this.hora);
@@ -37,7 +30,6 @@ public class RelogioAnalogico extends Relogio {
 
         //o relogio tem 60 segundos: 360 / 60 = 6° por segundo.
         double anguloSegundo = Math.toRadians(6.0 * this.segundo);
-
 
         //cor preta dos ponteiros
         desenho.setPenColor(Draw.BLACK);

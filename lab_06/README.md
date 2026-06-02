@@ -19,6 +19,7 @@ classDiagram
         # x: double
         # y: double
         + Relogio(x: double, y: double, h: int, m: int, s: int)
+        + Relogio(x: double, y: double)
         + desenhar(desenho: Draw)* void
         + atualizarTempo()* void
     }
@@ -26,7 +27,7 @@ classDiagram
     class Cronometro {
         <<abstract>>
         # modo: int
-        # Cronometro(x: double, y: double, h: int, m: int, s: int)
+        + Cronometro(x: double, y: double, hora: int, minuto: int, segundo: int)
     }
 
     class RelogioDisplay {
@@ -44,7 +45,6 @@ classDiagram
         - cor: Color
         - fonte: Font
         + RelogioTextual(x: double, y: double, tFonte: int, modo: int, fonte: Font, h: int, m: int, s: int)
-
     }
 
     class RelogioAnalogico {

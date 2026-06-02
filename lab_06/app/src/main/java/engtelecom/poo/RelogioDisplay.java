@@ -59,42 +59,6 @@ public class RelogioDisplay extends Cronometro {
         displays.get(5).setValor(this.segundo % 10);
     }
 
-//    //metodo para colocar como cronometro prog
-//    @Override
-//    public void setModoProgressivo() {
-//        this.modo = 1;
-//        this.hora = 0;
-//        this.minuto = 0;
-//        this.segundo = 0;
-//        ligarDisplay();
-//    }
-//
-//    //metodo para colocar como cronometro regr
-//    @Override
-//    public void setModoRegressivo(int h, int m, int s) {
-//        this.modo = 2;
-//        if (h >= 0 && h <= 23 && m >= 0 && m <= 59 && s >= 0 && s <= 59) {
-//            this.hora = h;
-//            this.minuto = m;
-//            this.segundo = s;
-//        } else {
-//            this.hora = 0;
-//            this.minuto = 0;
-//            this.segundo = 0;
-//        }
-//        ligarDisplay();
-//    }
-//
-//    //metodo para colocar como relogio normal
-//    @Override
-//    public void setModoRelogioComum() {
-//        this.modo = 0;
-//        this.hora = LocalTime.now().getHour();
-//        this.minuto = LocalTime.now().getMinute();
-//        this.segundo = LocalTime.now().getSecond();
-//        ligarDisplay();
-//    }
-
     @Override
     public void atualizarTempo() {
         //se for relogio normal ou cronometro prog, anda normal
