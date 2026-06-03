@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8df45ca7-9f64-47db-bcb0-ffc92464a6a7" name="Changes" comment="inicio das correcoes">
-      <change afterPath="$PROJECT_DIR$/../aula_16/app/src/main/java/engtelecom/poo/Caixa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aula_16/app/src/main/java/engtelecom/poo/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/Cronometro.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/Cronometro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioAnalogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioAnalogico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioTextual.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/engtelecom/poo/RelogioTextual.java" afterDir="false" />
-    </list>
+    <list default="true" id="8df45ca7-9f64-47db-bcb0-ffc92464a6a7" name="Changes" comment="cabo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,12 +58,12 @@
     &quot;assignee&quot;: &quot;sfvini&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/sfvini/POO.git&quot;,
-    &quot;accountId&quot;: &quot;e1304bca-334a-472c-9062-c26d7278efb9&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sfvini/POO.git",
+    "accountId": "7ec05ac5-250c-48ba-bd6a-cf7fa3f21e00"
   }
-}</component>
+}]]></component>
   <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-9.3.0-bin/79n14ral3mx1ozqr3csh2u872/gradle-9.3.0" javaHome="/usr/java/jdk-25-oracle-x64" gradleVersion="9.3.0" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -131,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1779933809948</updated>
       <workItem from="1780310265484" duration="1495000" />
-      <workItem from="1780490847810" duration="1712000" />
+      <workItem from="1780490847810" duration="1766000" />
     </task>
     <task id="LOCAL-00001" summary="foi">
       <option name="closed" value="true" />
@@ -173,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780311750703</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cabo">
+      <option name="closed" value="true" />
+      <created>1780492601823</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1780492601823</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +186,7 @@
     <MESSAGE value="interface e relogio" />
     <MESSAGE value="UML e RelogioDisplay" />
     <MESSAGE value="inicio das correcoes" />
-    <option name="LAST_COMMIT_MESSAGE" value="inicio das correcoes" />
+    <MESSAGE value="cabo" />
+    <option name="LAST_COMMIT_MESSAGE" value="cabo" />
   </component>
 </project>

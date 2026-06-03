@@ -3,13 +3,45 @@
  */
 package engtelecom.poo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        Caixa<String> c = new Caixa<>("Olá mundo");
-        Caixa<Pessoa> d = new Caixa<>(new Pessoa("Mateus"));
+//        Caixa<String> c = new Caixa<>("Olá mundo");
+//        Caixa<Pessoa> d = new Caixa<>(new Pessoa("Mateus"));
+//
+//        String s = c.getConteudo();
+//
+////        String err = d.getConteudo();
+//
+//        ArrayList<String> a;
+//        HashMap<String, String> b;
 
-        String s = c.getConteudo();
+        Scanner l = new Scanner(System.in);
+        int a, b;
 
-        String err = d.getConteudo();
+        try {
+            System.out.println("Num 1 ");
+            a = l.nextInt();
+
+            System.out.println("Num 2 ");
+            b = l.nextInt();
+
+            int res = a/b;
+
+            System.out.println(res);
+        } catch (InputMismatchException e) {
+            System.out.println("Tipo errado bocó");
+            l.nextLine();
+        } catch (ArithmeticException e){
+            System.err.println(e);
+            System.out.println("Vai dividir por zero aham");
+            l.nextLine();
+        }
+        System.out.println("Cabo");
     }
+
 }
