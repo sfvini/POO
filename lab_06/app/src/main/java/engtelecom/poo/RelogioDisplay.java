@@ -37,12 +37,14 @@ public class RelogioDisplay extends Cronometro {
         this.displays.add(new Display(x + (7.0 * f), y, this.tamanho));
         this.displays.add(new Display(x + (8.5 * f), y, this.tamanho));
 
-        //constroi conforme o modo passado
-        if (this.modo == 0 || this.modo == 1) {
+        if (this.modo == 0) {
             this.hora = LocalTime.now().getHour();
             this.minuto = LocalTime.now().getMinute();
             this.segundo = LocalTime.now().getSecond();
-            ligarDisplay();
+        } else if (this.modo == 1) {
+            this.hora = 0;
+            this.minuto = 0;
+            this.segundo = 0;
         } else {
             this.hora = h;
             this.minuto = m;
@@ -61,36 +63,7 @@ public class RelogioDisplay extends Cronometro {
 
     @Override
     public void atualizarTempo() {
-        //se for relogio normal ou cronometro prog, anda normal
-        if (this.modo == 0 || this.modo == 1) {
-            this.segundo++;
-            if (this.segundo == 60) {
-                this.segundo = 0;
-                this.minuto++;
-                if (this.minuto == 60) {
-                    this.minuto = 0;
-                    this.hora++;
-                    if (this.hora == 24) {
-                        this.hora = 0;
-                    }
-                }
-            }
-
-            //se for cronometro regr, volta o tempo ate 0
-        } else if (this.modo == 2) {
-            if (this.hora == 0 && this.minuto == 0 && this.segundo == 0) {
-                return;
-            }
-            this.segundo--;
-            if (this.segundo < 0) {
-                this.segundo = 59;
-                this.minuto--;
-                if (this.minuto < 0) {
-                    this.minuto = 59;
-                    this.hora--;
-                }
-            }
-        }
+        super.atualizarTempo();
         ligarDisplay();
     }
 
