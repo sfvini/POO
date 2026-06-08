@@ -3,12 +3,56 @@
  */
 package engtelecom.poo;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
+import edu.princeton.cs.algs4.AVLTreeST;
+import edu.princeton.cs.algs4.Draw;
+import edu.princeton.cs.algs4.DrawListener;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+
+public class App implements DrawListener {
+
+    private Draw draw;
+
+    public App() {
+        this.draw = new Draw();
+        this.draw.setCanvasSize(1200,600);
+        this.draw.setXscale(0, 1200);
+        this.draw.setYscale(0, 600);
+        this.draw.enableDoubleBuffering();
+        this.draw.setDefaultCloseOperation(3);
+        this.draw.setTitle("Jogo de cartas");
+
+        this.draw.addListener(this);
+
+        this.draw.clear(Draw.GREEN);
+        this.draw.show();
+    }
+
+    @Override
+    public void mouseClicked(double x, double y) {
+        CartaGrafica c = new CartaGrafica(ValorCarta.SEIS, NaipeCarta.COPAS,true, x, y);
+        c.desenhar(this.draw);
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        App app = new App();
+
+
+        Deque<CartaGrafica> baralho = new ArrayDeque<>();
+        double x = 60;
+
+        for (NaipeCarta naipe : NaipeCarta.values()){
+            for (ValorCarta valor : ValorCarta.values()){
+                CartaGrafica carta = new CartaGrafica(valor, naipe, false, x, 300);
+                x += 21;
+                baralho.add(carta);
+            }
+        }
+
+        for (CartaGrafica c : baralho){
+            c.desenhar(app.draw);
+        }
     }
 }
