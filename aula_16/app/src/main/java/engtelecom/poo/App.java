@@ -12,13 +12,8 @@ public class App {
     public static void main(String[] args) {
 //        Caixa<String> c = new Caixa<>("Olá mundo");
 //        Caixa<Pessoa> d = new Caixa<>(new Pessoa("Mateus"));
-//
 //        String s = c.getConteudo();
-//
-////        String err = d.getConteudo();
-//
-//        ArrayList<String> a;
-//        HashMap<String, String> b;
+//       String err = d.getConteudo();
 
         Scanner l = new Scanner(System.in);
         int a, b;
@@ -41,7 +36,9 @@ public class App {
             System.out.println("Vai dividir por zero aham");
             l.nextLine();
         }
-        System.out.println("Cabo");
+        finally {
+            System.out.println("Cabo");
+        }
     }
 
 }
