@@ -2,6 +2,8 @@ package engtelecom.poo;
 
 import edu.princeton.cs.algs4.Draw;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.Random;
 
 public class CartaGrafica extends Carta {
@@ -10,6 +12,8 @@ public class CartaGrafica extends Carta {
     private boolean face;
     private double x;
     private double y;
+    public static final double LARGURA = 72;
+    public static final double ALTURA = 96;
 
     public CartaGrafica(ValorCarta valor, NaipeCarta naipe, boolean face, double x, double y) {
         super(valor, naipe);
@@ -21,10 +25,9 @@ public class CartaGrafica extends Carta {
 
     public void desenhar(Draw draw){
 
-        Random r = new Random();
         Random b = new Random();
 
-        if (r.nextBoolean()){
+        if (face){
             draw.picture(x, y, link);
         }
         else {
@@ -36,5 +39,16 @@ public class CartaGrafica extends Carta {
             }
         }
         draw.show();
+    }
+
+    public boolean clicouDentro(double x, double y){
+        if (x > this.x - LARGURA/2 && x < this.x + LARGURA){
+            return y > this.x - ALTURA / 2 && x < this.y + ALTURA;
+        }
+        return false;
+    }
+
+    public void virarCarta(){
+        this.face = !face;
     }
 }

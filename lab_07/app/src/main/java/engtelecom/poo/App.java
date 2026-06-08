@@ -3,17 +3,15 @@
  */
 package engtelecom.poo;
 
-import edu.princeton.cs.algs4.AVLTreeST;
 import edu.princeton.cs.algs4.Draw;
 import edu.princeton.cs.algs4.DrawListener;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
+import java.util.*;
 
 public class App implements DrawListener {
 
     private Draw draw;
+    private ArrayList<CartaGrafica> baralho = new ArrayList<>();
 
     public App() {
         this.draw = new Draw();
@@ -28,19 +26,6 @@ public class App implements DrawListener {
 
         this.draw.clear(Draw.GREEN);
         this.draw.show();
-    }
-
-    @Override
-    public void mouseClicked(double x, double y) {
-        CartaGrafica c = new CartaGrafica(ValorCarta.SEIS, NaipeCarta.COPAS,true, x, y);
-        c.desenhar(this.draw);
-    }
-
-    public static void main(String[] args) {
-        App app = new App();
-
-
-        Deque<CartaGrafica> baralho = new ArrayDeque<>();
         double x = 60;
 
         for (NaipeCarta naipe : NaipeCarta.values()){
@@ -50,8 +35,23 @@ public class App implements DrawListener {
                 baralho.add(carta);
             }
         }
+        Collections.shuffle(baralho);
+    }
 
+    @Override
+    public void mouseClicked(double x, double y) {
         for (CartaGrafica c : baralho){
+           if (c.clicouDentro(x, y)){
+               c.virarCarta();
+               c.desenhar(draw);
+           }
+        }
+    }
+
+    public static void main(String[] args) {
+        App app = new App();
+
+        for (CartaGrafica c : app.baralho){
             c.desenhar(app.draw);
         }
     }
