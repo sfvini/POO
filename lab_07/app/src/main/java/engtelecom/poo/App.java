@@ -46,6 +46,7 @@ public class App implements DrawListener {
                c.desenhar(draw);
            }
         }
+        draw.show();
     }
 
     public static void main(String[] args) {
@@ -54,5 +55,6 @@ public class App implements DrawListener {
         for (CartaGrafica c : app.baralho){
             c.desenhar(app.draw);
         }
+        app.draw.show();
     }
 }

@@ -31,19 +31,18 @@ public class CartaGrafica extends Carta {
             draw.picture(x, y, link);
         }
         else {
-            if (b.nextInt(3) == 1) {
+            if (b.nextBoolean()) {
                 draw.picture(x,y,"cartas/fundoa.png");
             }
             else {
                 draw.picture(x,y,"cartas/fundov.png");
             }
         }
-        draw.show();
     }
 
     public boolean clicouDentro(double x, double y){
-        if (x > this.x - LARGURA/2 && x < this.x + LARGURA){
-            return y > this.x - ALTURA / 2 && x < this.y + ALTURA;
+        if (x > this.x - LARGURA/2 && x < this.x + LARGURA/2){
+            return y > this.y - ALTURA / 2 && y < this.y + ALTURA/2;
         }
         return false;
     }

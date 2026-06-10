@@ -1,7 +1,5 @@
 package engtelecom.poo;
 
-import java.util.Arrays;
-
 public class Carta {
     private ValorCarta valor;
     private NaipeCarta naipe;

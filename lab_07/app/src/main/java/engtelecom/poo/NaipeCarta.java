@@ -10,20 +10,20 @@ public enum NaipeCarta {
     public final char incial;
     public final String nome;
 
-    NaipeCarta( int id, String nome, char inicial) {
+    NaipeCarta(int id, String nome, char inicial) {
         this.nome = nome;
         this.id = id;
         this.incial = inicial;
     }
 
-    public static NaipeCarta getByInicial(int id) {
-        for (NaipeCarta n : NaipeCarta.values()) {
-            if (n.id == id) {
-                return n;
-            }
-        }
-        throw new IllegalArgumentException("ID Inválido");
-    }
+//    public static NaipeCarta getByInicial(int id) {
+//        for (NaipeCarta n : NaipeCarta.values()) {
+//            if (n.id == id) {
+//                return n;
+//            }
+//        }
+//        throw new IllegalArgumentException("ID Inválido");
+//    }
 
     @Override
     public String toString() {

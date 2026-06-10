@@ -25,14 +25,14 @@ public enum ValorCarta {
         this.inicial = inicial;
     }
 
-    public static ValorCarta getById(int id) {
-        for (ValorCarta v : ValorCarta.values()) {
-            if (v.id == id) {
-                return v;
-            }
-        }
-        throw new IllegalArgumentException("ID Inválido");
-    }
+//    public static ValorCarta getById(int id) {
+//        for (ValorCarta v : ValorCarta.values()) {
+//            if (v.id == id) {
+//                return v;
+//            }
+//        }
+//        throw new IllegalArgumentException("ID Inválido");
+//    }
 
     @Override
     public String toString() {
