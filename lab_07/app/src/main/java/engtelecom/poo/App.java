@@ -11,7 +11,7 @@ import java.util.*;
 public class App implements DrawListener {
 
     private Draw draw;
-    private ArrayList<CartaGrafica> baralho = new ArrayList<>();
+    private ArrayList<CartaGUI> baralho = new ArrayList<>();
 
     public App() {
         this.draw = new Draw();
@@ -30,7 +30,7 @@ public class App implements DrawListener {
 
         for (NaipeCarta naipe : NaipeCarta.values()){
             for (ValorCarta valor : ValorCarta.values()){
-                CartaGrafica carta = new CartaGrafica(valor, naipe, false, x, 300);
+                CartaGUI carta = new CartaGUI(valor, naipe, false, x, 300);
                 x += 21;
                 baralho.add(carta);
             }
@@ -40,7 +40,7 @@ public class App implements DrawListener {
 
     @Override
     public void mouseClicked(double x, double y) {
-        for (CartaGrafica c : baralho){
+        for (CartaGUI c : baralho){
            if (c.clicouDentro(x, y)){
                c.virarCarta();
                c.desenhar(draw);
@@ -52,7 +52,7 @@ public class App implements DrawListener {
     public static void main(String[] args) {
         App app = new App();
 
-        for (CartaGrafica c : app.baralho){
+        for (CartaGUI c : app.baralho){
             c.desenhar(app.draw);
         }
         app.draw.show();

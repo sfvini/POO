@@ -9,8 +9,8 @@ Carta --* App
 
 DadoGUI --|> Dado
 
-CartaGrafica ..|> ElementoGUI
-DadoGUI ..|> ElementoGUI
+CartaGrafica ..|> Elemento
+DadoGUI ..|> Elemento
 
 CartaGrafica --|> Carta
 NaipeCarta -- Carta
@@ -18,13 +18,13 @@ ValorCarta -- Carta
 
 class App {
      - draw: Draw
-     - elementos: ArrayList~ElementoGUI~
+     - elementos: ArrayList~Elemento~
      + app()
      + mouseClicked(x: double, y: double) void
      + main(args: String[]) void
 }
 
-class ElementoGUI {
+class Elemento {
     <<interface>>
     + desenhar(draw: Draw) void*
 }
@@ -36,9 +36,14 @@ class Carta {
     + toString() String
 }
 
-class CartaGrafica {
-    - x: int
-    - y: int
+class CartaGUI {
+    - link: String
+    - face: boolean
+    - $LARGURA: final double
+    - $ALTURA: final double
+    - x: double
+    - y: double
+    + CartaGUI(naipe: NaipeCarta, valor: ValorCarta, face: boolean, x: double, y: double)
 }
 
 class Dado {
@@ -50,8 +55,8 @@ class Dado {
 }
 
 class DadoGUI {
-    - x: int
-    - y: int
+    - x: double
+    - y: double
 }
 
 class NaipeCarta {

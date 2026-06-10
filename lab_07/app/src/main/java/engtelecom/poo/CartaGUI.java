@@ -2,11 +2,9 @@ package engtelecom.poo;
 
 import edu.princeton.cs.algs4.Draw;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.Random;
 
-public class CartaGrafica extends Carta {
+public class CartaGUI extends Carta {
 
     private String link;
     private boolean face;
@@ -15,7 +13,7 @@ public class CartaGrafica extends Carta {
     public static final double LARGURA = 72;
     public static final double ALTURA = 96;
 
-    public CartaGrafica(ValorCarta valor, NaipeCarta naipe, boolean face, double x, double y) {
+    public CartaGUI(ValorCarta valor, NaipeCarta naipe, boolean face, double x, double y) {
         super(valor, naipe);
         this.link = "cartas/" + valor.inicial + naipe.incial + ".png";
         this.x = x;
