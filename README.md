@@ -16,6 +16,7 @@
 * [Laboratório 04](lab_04) - LAB 4
 * [Laboratório 05](lab_05) - LAB 5
 * [Laboratório 06](lab_06) - LAB 6
+* [Laboratório 06](lab_07) - LAB 7
 
 ## Aulas
 
