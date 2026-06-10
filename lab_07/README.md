@@ -44,6 +44,9 @@ class CartaGUI {
     - x: double
     - y: double
     + CartaGUI(naipe: NaipeCarta, valor: ValorCarta, face: boolean, x: double, y: double)
+    + desenhar(draw: Draw)
+    + virarCarta()
+    + clicouDentro(x: double, y: double) boolean
 }
 
 class Dado {
