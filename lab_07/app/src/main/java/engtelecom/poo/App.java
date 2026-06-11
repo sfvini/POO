@@ -30,7 +30,7 @@ public class App implements DrawListener {
 
         for (NaipeCarta naipe : NaipeCarta.values()){
             for (ValorCarta valor : ValorCarta.values()){
-                CartaGUI carta = new CartaGUI(valor, naipe, false, x, 300);
+                CartaGUI carta = new CartaGUI(naipe, valor, false, x, 300);
                 x += 21;
                 baralho.add(carta);
             }

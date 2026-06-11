@@ -1,32 +1,27 @@
 package engtelecom.poo;
 
 public enum NaipeCarta {
-    PAUS(1, "Paus", 'p'),
-    OUROS(2, "Ouros", 'o'),
-    COPAS(3, "Copas", 'c'),
-    ESPADAS(4, "Espadas", 'e');
+    COPAS(1, "Copas", 'c'),
+    ESPADAS(2, "Espadas", 'e'),
+    OUROS(3, "Ouros", 'o'),
+    PAUS(4, "Paus", 'p');
 
-    public final int id;
-    public final char incial;
-    public final String nome;
+    private final int id;
+    private final char inicial;
+    private final String nome;
 
     NaipeCarta(int id, String nome, char inicial) {
-        this.nome = nome;
         this.id = id;
-        this.incial = inicial;
+        this.nome = nome;
+        this.inicial = inicial;
     }
 
-//    public static NaipeCarta getByInicial(int id) {
-//        for (NaipeCarta n : NaipeCarta.values()) {
-//            if (n.id == id) {
-//                return n;
-//            }
-//        }
-//        throw new IllegalArgumentException("ID Inválido");
-//    }
+    public char getInicial() {
+        return inicial;
+    }
 
     @Override
     public String toString() {
-        return String.format("%s", this.nome);
+        return nome;
     }
 }

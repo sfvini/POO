@@ -1,16 +1,16 @@
 package engtelecom.poo;
 
 public class Carta {
-    private ValorCarta valor;
     private NaipeCarta naipe;
+    private ValorCarta valor;
 
-    public Carta(ValorCarta valor, NaipeCarta naipe) {
-        this.valor = valor;
+    public Carta(NaipeCarta naipe, ValorCarta valor) {
         this.naipe = naipe;
+        this.valor = valor;
     }
 
     @Override
     public String toString() {
-        return String.format("\n VALOR: " + this.valor + " NAIPE: " + this.naipe);
+        return valor + " de " + naipe;
     }
 }
